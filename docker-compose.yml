@@ -17,10 +17,10 @@ services:
     
   tomee:
     image: pravrang/tomee7.0
-    expose:
-      - "8080"
-      - "8443"
-      - "8009"
+    ports:
+      - 8080:8080
+      - 8443:8443
+      - 8009:8009
     volumes:
       - "vol_logs:/opt/tomee/webapps"
       - "vol_logs:/opt/tomee/logs"
